@@ -1,0 +1,28 @@
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.vbprojAssemblyReference.cache
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmAHP.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmAlternatif.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmMainMenu.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmNilaiPrioritasKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmPBKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmPBSubKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmPenilaianAlternatif.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmSubKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.Resources.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.vbproj.GenerateResource.cache
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\SPK - AHP.exe.config
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\SPK - AHP.exe
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\SPK - AHP.pdb
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\SPK - AHP.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\BouncyCastle.Crypto.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\Google.Protobuf.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\MySql.Data.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\Renci.SshNet.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\Google.Protobuf.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\MySql.Data.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Debug\Renci.SshNet.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.vbproj.CopyComplete
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\SPK - AHP.exe
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\SPK - AHP.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\SPK - AHP.pdb
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmLogin.resources

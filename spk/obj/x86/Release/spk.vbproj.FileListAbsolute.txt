@@ -1,0 +1,28 @@
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\SPK - AHP.exe.config
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\SPK - AHP.exe
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\SPK - AHP.pdb
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\SPK - AHP.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\BouncyCastle.Crypto.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Google.Protobuf.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\MySql.Data.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Renci.SshNet.dll
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Google.Protobuf.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\MySql.Data.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Renci.SshNet.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.vbprojAssemblyReference.cache
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmAHP.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmAlternatif.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmLogin.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmMainMenu.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmNilaiPrioritasKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmPBKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmPBSubKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmPenilaianAlternatif.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.frmSubKriteria.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.Resources.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.vbproj.GenerateResource.cache
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\spk.vbproj.CopyComplete
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\SPK - AHP.exe
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\SPK - AHP.xml
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Release\SPK - AHP.pdb

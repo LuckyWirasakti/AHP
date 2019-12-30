@@ -1,0 +1,38 @@
+﻿Module mdlAHP
+    Function NilaiIndeksRandom(ByVal jlhMatriks As Integer) As Double
+        Select Case jlhMatriks
+            Case 1
+                Return 0
+            Case 2
+                Return 0
+            Case 3
+                Return 0.58
+            Case 4
+                Return 0.9
+            Case 5
+                Return 1.12
+            Case 6
+                Return 1.24
+            Case 7
+                Return 1.32
+            Case 8
+                Return 1.41
+            Case 9
+                Return 1.45
+            Case 10
+                Return 1.49
+            Case 11
+                Return 1.51
+            Case 12
+                Return 1.48
+            Case 13
+                Return 1.56
+            Case 14
+                Return 1.57
+            Case 15
+                Return 1.59
+            Case Else
+                Return 0
+        End Select
+    End Function
+End Module
