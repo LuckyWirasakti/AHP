@@ -87,10 +87,6 @@ Public Class frmPenilaianAlternatif
         End If
     End Sub
 
-    Private Sub cmdTutup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdTutup.Click
-        Me.Hide()
-    End Sub
-
     Private Sub dgv_CellBeginEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellCancelEventArgs) Handles dgv.CellBeginEdit
         If e.ColumnIndex > 1 Then
             If e.RowIndex >= 0 Then
@@ -124,7 +120,7 @@ Public Class frmPenilaianAlternatif
         End If
     End Sub
 
-    Private Sub cmdSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSimpan.Click
+    Private Sub cmdSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim terisi As Boolean = True
         For i = 2 To dgv.ColumnCount - 1
             For j = 0 To namaAlternatif.Length - 1
@@ -160,5 +156,9 @@ Public Class frmPenilaianAlternatif
         Else
             MsgBox("Mohon isi dengan benar", vbInformation + vbOKOnly, c.namaProgram)
         End If
+    End Sub
+
+    Private Sub TutupToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Close()
     End Sub
 End Class

@@ -117,6 +117,8 @@ Partial Class frmAlternatif
         Me.Controls.Add(Me.lblKeterangan)
         Me.Controls.Add(Me.lblNama)
         Me.Controls.Add(Me.dgv)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmAlternatif"
         Me.Text = "Daftar Alternatif"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()

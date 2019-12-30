@@ -151,6 +151,9 @@ Partial Class frmKriteria
         Me.ClientSize = New System.Drawing.Size(860, 373)
         Me.Controls.Add(Me.gbx)
         Me.Controls.Add(Me.dgv)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmKriteria"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False

@@ -186,6 +186,8 @@ Partial Class frmPBKriteria
         Me.Controls.Add(Me.gbxPrioritas)
         Me.Controls.Add(Me.cmdProses)
         Me.Controls.Add(Me.gbxPB)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPBKriteria"
         Me.Text = "Perbandingan Berpasangan Kriteria"
         Me.gbxPB.ResumeLayout(False)

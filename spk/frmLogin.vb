@@ -10,7 +10,7 @@ Public Class frmLogin
         End If
     End Sub
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click, txtPassword.Leave
         Try
             Dim query As String = "SELECT * FROM otentikasi WHERE username = '" & txtUsername.Text & "' AND password = '" & txtPassword.Text & "'"
             Dim sqlcmd As MySqlCommand

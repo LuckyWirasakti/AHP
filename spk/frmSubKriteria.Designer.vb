@@ -49,7 +49,7 @@ Partial Class frmSubKriteria
         Me.gbxDGV.Controls.Add(Me.dgv)
         Me.gbxDGV.Location = New System.Drawing.Point(13, 13)
         Me.gbxDGV.Name = "gbxDGV"
-        Me.gbxDGV.Size = New System.Drawing.Size(576, 371)
+        Me.gbxDGV.Size = New System.Drawing.Size(647, 371)
         Me.gbxDGV.TabIndex = 0
         Me.gbxDGV.TabStop = False
         Me.gbxDGV.Text = "Table Sub Kriteria"
@@ -59,7 +59,7 @@ Partial Class frmSubKriteria
         Me.cmbKriteria.FormattingEnabled = True
         Me.cmbKriteria.Location = New System.Drawing.Point(7, 19)
         Me.cmbKriteria.Name = "cmbKriteria"
-        Me.cmbKriteria.Size = New System.Drawing.Size(563, 21)
+        Me.cmbKriteria.Size = New System.Drawing.Size(634, 21)
         Me.cmbKriteria.TabIndex = 1
         '
         'dgv
@@ -70,7 +70,7 @@ Partial Class frmSubKriteria
         Me.dgv.Location = New System.Drawing.Point(7, 46)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        Me.dgv.Size = New System.Drawing.Size(563, 319)
+        Me.dgv.Size = New System.Drawing.Size(634, 319)
         Me.dgv.TabIndex = 0
         '
         'gbxInput
@@ -86,7 +86,7 @@ Partial Class frmSubKriteria
         Me.gbxInput.Controls.Add(Me.lblNama)
         Me.gbxInput.Controls.Add(Me.lblUrutan)
         Me.gbxInput.Controls.Add(Me.lblKriteria)
-        Me.gbxInput.Location = New System.Drawing.Point(596, 13)
+        Me.gbxInput.Location = New System.Drawing.Point(666, 13)
         Me.gbxInput.Name = "gbxInput"
         Me.gbxInput.Size = New System.Drawing.Size(293, 365)
         Me.gbxInput.TabIndex = 1
@@ -191,9 +191,11 @@ Partial Class frmSubKriteria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(901, 390)
+        Me.ClientSize = New System.Drawing.Size(971, 390)
         Me.Controls.Add(Me.gbxInput)
         Me.Controls.Add(Me.gbxDGV)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmSubKriteria"
         Me.Text = "Daftar Sub Kriteria"
         Me.gbxDGV.ResumeLayout(False)

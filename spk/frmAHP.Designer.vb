@@ -36,7 +36,7 @@ Partial Class frmAHP
         '
         'cmdSimpan
         '
-        Me.cmdSimpan.Location = New System.Drawing.Point(609, 366)
+        Me.cmdSimpan.Location = New System.Drawing.Point(814, 366)
         Me.cmdSimpan.Name = "cmdSimpan"
         Me.cmdSimpan.Size = New System.Drawing.Size(118, 53)
         Me.cmdSimpan.TabIndex = 2
@@ -45,7 +45,7 @@ Partial Class frmAHP
         '
         'cmdTutup
         '
-        Me.cmdTutup.Location = New System.Drawing.Point(733, 366)
+        Me.cmdTutup.Location = New System.Drawing.Point(938, 366)
         Me.cmdTutup.Name = "cmdTutup"
         Me.cmdTutup.Size = New System.Drawing.Size(118, 53)
         Me.cmdTutup.TabIndex = 3
@@ -57,7 +57,7 @@ Partial Class frmAHP
         Me.gbxAHP.Controls.Add(Me.dgvAHP)
         Me.gbxAHP.Location = New System.Drawing.Point(13, 13)
         Me.gbxAHP.Name = "gbxAHP"
-        Me.gbxAHP.Size = New System.Drawing.Size(590, 406)
+        Me.gbxAHP.Size = New System.Drawing.Size(776, 406)
         Me.gbxAHP.TabIndex = 4
         Me.gbxAHP.TabStop = False
         Me.gbxAHP.Text = "AHP"
@@ -68,13 +68,13 @@ Partial Class frmAHP
         Me.dgvAHP.Location = New System.Drawing.Point(7, 20)
         Me.dgvAHP.Name = "dgvAHP"
         Me.dgvAHP.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.dgvAHP.Size = New System.Drawing.Size(577, 380)
+        Me.dgvAHP.Size = New System.Drawing.Size(763, 380)
         Me.dgvAHP.TabIndex = 0
         '
         'gbxHasil
         '
         Me.gbxHasil.Controls.Add(Me.dgvHasil)
-        Me.gbxHasil.Location = New System.Drawing.Point(610, 13)
+        Me.gbxHasil.Location = New System.Drawing.Point(815, 13)
         Me.gbxHasil.Name = "gbxHasil"
         Me.gbxHasil.Size = New System.Drawing.Size(241, 347)
         Me.gbxHasil.TabIndex = 5
@@ -94,11 +94,14 @@ Partial Class frmAHP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(864, 431)
+        Me.ClientSize = New System.Drawing.Size(1068, 431)
         Me.Controls.Add(Me.gbxHasil)
         Me.Controls.Add(Me.gbxAHP)
         Me.Controls.Add(Me.cmdTutup)
         Me.Controls.Add(Me.cmdSimpan)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmAHP"
         Me.Text = "AHP"
         Me.gbxAHP.ResumeLayout(False)

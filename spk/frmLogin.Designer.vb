@@ -36,7 +36,7 @@ Partial Class frmLogin
         'btnCancel
         '
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(340, 216)
+        Me.btnCancel.Location = New System.Drawing.Point(318, 298)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(94, 23)
         Me.btnCancel.TabIndex = 12
@@ -44,7 +44,7 @@ Partial Class frmLogin
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(217, 216)
+        Me.btnLogin.Location = New System.Drawing.Point(195, 298)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(94, 23)
         Me.btnLogin.TabIndex = 11
@@ -52,7 +52,7 @@ Partial Class frmLogin
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(214, 179)
+        Me.txtPassword.Location = New System.Drawing.Point(192, 261)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(220, 20)
@@ -60,27 +60,27 @@ Partial Class frmLogin
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(214, 129)
+        Me.txtUsername.Location = New System.Drawing.Point(192, 211)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(220, 20)
         Me.txtUsername.TabIndex = 8
         '
         'PasswordLabel
         '
-        Me.PasswordLabel.Location = New System.Drawing.Point(214, 152)
+        Me.PasswordLabel.Location = New System.Drawing.Point(192, 234)
         Me.PasswordLabel.Name = "PasswordLabel"
         Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
         Me.PasswordLabel.TabIndex = 9
-        Me.PasswordLabel.Text = "&Password"
+        Me.PasswordLabel.Text = "Password"
         Me.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'UsernameLabel
         '
-        Me.UsernameLabel.Location = New System.Drawing.Point(214, 98)
+        Me.UsernameLabel.Location = New System.Drawing.Point(192, 180)
         Me.UsernameLabel.Name = "UsernameLabel"
         Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
         Me.UsernameLabel.TabIndex = 6
-        Me.UsernameLabel.Text = "&User name"
+        Me.UsernameLabel.Text = "User name"
         Me.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LogoPictureBox

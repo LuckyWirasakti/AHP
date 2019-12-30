@@ -5,7 +5,7 @@ Public Class frmNilaiPrioritasKriteria
     Dim sqlcmd As MySqlCommand
     Dim sqlrd As MySqlDataReader
 
-    Private Sub cmdTutup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdTutup.Click
+    Private Sub cmdTutup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
     End Sub
 

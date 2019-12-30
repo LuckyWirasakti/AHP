@@ -196,6 +196,8 @@ Partial Class frmPBSubKriteria
         Me.Controls.Add(Me.gbxPenjumlahan)
         Me.Controls.Add(Me.gbxPrioritas)
         Me.Controls.Add(Me.gbxPB)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPBSubKriteria"
         Me.Text = "Perbandingan Berpasangan Sub Kriteria"
         Me.gbxRasio.ResumeLayout(False)

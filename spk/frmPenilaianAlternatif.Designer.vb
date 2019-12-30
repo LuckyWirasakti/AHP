@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPenilaianAlternatif
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,55 +20,59 @@ Partial Class frmPenilaianAlternatif
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgv = New System.Windows.Forms.DataGridView()
-        Me.cmdSimpan = New System.Windows.Forms.Button()
-        Me.cmdTutup = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv
         '
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(13, 13)
+        Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv.Location = New System.Drawing.Point(0, 0)
         Me.dgv.Name = "dgv"
-        Me.dgv.Size = New System.Drawing.Size(747, 264)
+        Me.dgv.Size = New System.Drawing.Size(772, 331)
         Me.dgv.TabIndex = 0
         '
-        'cmdSimpan
+        'MenuStrip1
         '
-        Me.cmdSimpan.Location = New System.Drawing.Point(524, 283)
-        Me.cmdSimpan.Name = "cmdSimpan"
-        Me.cmdSimpan.Size = New System.Drawing.Size(115, 38)
-        Me.cmdSimpan.TabIndex = 1
-        Me.cmdSimpan.Text = "Simpan"
-        Me.cmdSimpan.UseVisualStyleBackColor = True
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(191, 24)
+        Me.MenuStrip1.TabIndex = 2
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'cmdTutup
+        'FileToolStripMenuItem
         '
-        Me.cmdTutup.Location = New System.Drawing.Point(645, 283)
-        Me.cmdTutup.Name = "cmdTutup"
-        Me.cmdTutup.Size = New System.Drawing.Size(115, 38)
-        Me.cmdTutup.TabIndex = 2
-        Me.cmdTutup.Text = "Tutup"
-        Me.cmdTutup.UseVisualStyleBackColor = True
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.FileToolStripMenuItem.Text = "Simpan"
         '
         'frmPenilaianAlternatif
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(772, 331)
-        Me.Controls.Add(Me.cmdTutup)
-        Me.Controls.Add(Me.cmdSimpan)
         Me.Controls.Add(Me.dgv)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPenilaianAlternatif"
         Me.Text = "Penilaian Alternatif"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgv As System.Windows.Forms.DataGridView
-    Friend WithEvents cmdSimpan As System.Windows.Forms.Button
-    Friend WithEvents cmdTutup As System.Windows.Forms.Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
 End Class
