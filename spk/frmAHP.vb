@@ -180,10 +180,20 @@ Public Class frmAHP
     Private Sub loadRanking()
         dgvHasil.Columns.Add("Nama", "Nama")
         dgvHasil.Columns.Add("Nilai AHP", "Nilai AHP")
+        dgvHasil.Columns.Add("Rekomender", "Rekomender")
 
         Dim sqlcmd As MySqlCommand
         Dim sqlrd As MySqlDataReader
+        Dim sqlcmd2 As MySqlCommand
+        Dim recommend As String
+        Dim average As String
+
         Try
+            c.myOpen()
+            sqlcmd2 = New MySqlCommand("SELECT avg(ahp.ahp) AS rekomender FROM ahp INNER JOIN alternatif ON alternatif.id_alternatif = ahp.id_alternatif ORDER BY ahp.ahp DESC", c.conn)
+            average = sqlcmd2.ExecuteScalar
+            c.myClose()
+
             c.myOpen()
             sqlcmd = New MySqlCommand("SELECT alternatif.nama, ahp.ahp FROM ahp INNER JOIN alternatif ON alternatif.id_alternatif = ahp.id_alternatif ORDER BY ahp.ahp DESC", c.conn)
             sqlrd = sqlcmd.ExecuteReader
@@ -194,7 +204,17 @@ Public Class frmAHP
                     dgvHasil.Rows.Add(1)
                     dgvHasil.Rows(i).HeaderCell.Value = (i + 1).ToString
                     dgvHasil.Item(0, i).Value = sqlrd("nama")
-                    dgvHasil.Item(1, i).Value = sqlrd("ahp")
+
+                    Dim ahp As String = sqlrd("ahp")
+                    dgvHasil.Item(1, i).Value = ahp
+
+                    If CDec(ahp) >= CDec(average) Then
+                        recommend = "Direkomendasikan"
+                    Else
+                        recommend = "Tidak Direkomendasikan"
+                    End If
+
+                    dgvHasil.Item(2, i).Value = recommend
                     i += 1
                 End While
             End If

@@ -45,7 +45,7 @@ Partial Class frmAHP
         '
         'cmdTutup
         '
-        Me.cmdTutup.Location = New System.Drawing.Point(938, 366)
+        Me.cmdTutup.Location = New System.Drawing.Point(1110, 360)
         Me.cmdTutup.Name = "cmdTutup"
         Me.cmdTutup.Size = New System.Drawing.Size(118, 53)
         Me.cmdTutup.TabIndex = 3
@@ -76,7 +76,7 @@ Partial Class frmAHP
         Me.gbxHasil.Controls.Add(Me.dgvHasil)
         Me.gbxHasil.Location = New System.Drawing.Point(815, 13)
         Me.gbxHasil.Name = "gbxHasil"
-        Me.gbxHasil.Size = New System.Drawing.Size(241, 347)
+        Me.gbxHasil.Size = New System.Drawing.Size(413, 347)
         Me.gbxHasil.TabIndex = 5
         Me.gbxHasil.TabStop = False
         Me.gbxHasil.Text = "Ranking"
@@ -87,14 +87,14 @@ Partial Class frmAHP
         Me.dgvHasil.Location = New System.Drawing.Point(7, 20)
         Me.dgvHasil.Name = "dgvHasil"
         Me.dgvHasil.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.dgvHasil.Size = New System.Drawing.Size(228, 321)
+        Me.dgvHasil.Size = New System.Drawing.Size(400, 321)
         Me.dgvHasil.TabIndex = 0
         '
         'frmAHP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1068, 431)
+        Me.ClientSize = New System.Drawing.Size(1234, 431)
         Me.Controls.Add(Me.gbxHasil)
         Me.Controls.Add(Me.gbxAHP)
         Me.Controls.Add(Me.cmdTutup)
