@@ -249,4 +249,49 @@ Public Class frmAHP
     Private Sub dgvHasil_CellBeginEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellCancelEventArgs) Handles dgvHasil.CellBeginEdit
         e.Cancel = True
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.PrintPreviewControl.StartPage = 0
+        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1.0
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+
+    Dim mRow As Integer = 0
+    Dim newpage As Boolean = True
+    Private Sub PrintDocument1_PrintPage(sender As System.Object, e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        With dgvHasil
+            Dim fmt As StringFormat = New StringFormat(StringFormatFlags.LineLimit)
+            fmt.LineAlignment = StringAlignment.Center
+            fmt.Trimming = StringTrimming.EllipsisCharacter
+            Dim y As Single = e.MarginBounds.Top
+            Do While mRow < .RowCount
+                Dim row As DataGridViewRow = .Rows(mRow)
+                Dim x As Single = e.MarginBounds.Left
+                Dim h As Single = 0
+                For Each cell As DataGridViewCell In row.Cells
+                    Dim rc As RectangleF = New RectangleF(x, y, cell.Size.Width, cell.Size.Height)
+                    e.Graphics.DrawRectangle(Pens.Black, rc.Left, rc.Top, rc.Width, rc.Height)
+
+                    If (newpage) Then
+                        e.Graphics.DrawString(dgvHasil.Columns(cell.ColumnIndex).HeaderText, .Font, Brushes.Black, rc, fmt)
+                    Else
+                        e.Graphics.DrawString(dgvHasil.Rows(cell.RowIndex).Cells(cell.ColumnIndex).FormattedValue.ToString(), .Font, Brushes.Black, rc, fmt)
+                    End If
+                    x += rc.Width
+                    h = Math.Max(h, rc.Height)
+                Next
+                newpage = False
+                y += h
+                mRow += 1
+                If y + h > e.MarginBounds.Bottom Then
+                    e.HasMorePages = True
+                    mRow -= 1
+                    newpage = True
+                    Exit Sub
+                End If
+            Loop
+            mRow = 0
+        End With
+    End Sub
 End Class

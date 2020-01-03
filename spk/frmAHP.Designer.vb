@@ -22,12 +22,16 @@ Partial Class frmAHP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAHP))
         Me.cmdSimpan = New System.Windows.Forms.Button()
         Me.cmdTutup = New System.Windows.Forms.Button()
         Me.gbxAHP = New System.Windows.Forms.GroupBox()
         Me.dgvAHP = New System.Windows.Forms.DataGridView()
         Me.gbxHasil = New System.Windows.Forms.GroupBox()
         Me.dgvHasil = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.gbxAHP.SuspendLayout()
         CType(Me.dgvAHP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxHasil.SuspendLayout()
@@ -45,7 +49,7 @@ Partial Class frmAHP
         '
         'cmdTutup
         '
-        Me.cmdTutup.Location = New System.Drawing.Point(1110, 360)
+        Me.cmdTutup.Location = New System.Drawing.Point(1110, 366)
         Me.cmdTutup.Name = "cmdTutup"
         Me.cmdTutup.Size = New System.Drawing.Size(118, 53)
         Me.cmdTutup.TabIndex = 3
@@ -65,10 +69,11 @@ Partial Class frmAHP
         'dgvAHP
         '
         Me.dgvAHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAHP.Location = New System.Drawing.Point(7, 20)
+        Me.dgvAHP.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvAHP.Location = New System.Drawing.Point(3, 16)
         Me.dgvAHP.Name = "dgvAHP"
         Me.dgvAHP.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.dgvAHP.Size = New System.Drawing.Size(763, 380)
+        Me.dgvAHP.Size = New System.Drawing.Size(770, 387)
         Me.dgvAHP.TabIndex = 0
         '
         'gbxHasil
@@ -84,17 +89,41 @@ Partial Class frmAHP
         'dgvHasil
         '
         Me.dgvHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHasil.Location = New System.Drawing.Point(7, 20)
+        Me.dgvHasil.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvHasil.Location = New System.Drawing.Point(3, 16)
         Me.dgvHasil.Name = "dgvHasil"
         Me.dgvHasil.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.dgvHasil.Size = New System.Drawing.Size(400, 321)
+        Me.dgvHasil.Size = New System.Drawing.Size(407, 328)
         Me.dgvHasil.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(968, 366)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(118, 53)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Cetak"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'PrintDocument1
+        '
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
         '
         'frmAHP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1234, 431)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.gbxHasil)
         Me.Controls.Add(Me.gbxAHP)
         Me.Controls.Add(Me.cmdTutup)
@@ -117,4 +146,7 @@ Partial Class frmAHP
     Friend WithEvents dgvAHP As System.Windows.Forms.DataGridView
     Friend WithEvents gbxHasil As System.Windows.Forms.GroupBox
     Friend WithEvents dgvHasil As System.Windows.Forms.DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
 End Class
