@@ -32,6 +32,9 @@ Partial Class frmAHP
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.Nama = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nilai_AHP = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Rekomendasi = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbxAHP.SuspendLayout()
         CType(Me.dgvAHP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxHasil.SuspendLayout()
@@ -89,6 +92,7 @@ Partial Class frmAHP
         'dgvHasil
         '
         Me.dgvHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvHasil.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nama, Me.Nilai_AHP, Me.Rekomendasi})
         Me.dgvHasil.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvHasil.Location = New System.Drawing.Point(3, 16)
         Me.dgvHasil.Name = "dgvHasil"
@@ -117,6 +121,25 @@ Partial Class frmAHP
         Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
+        '
+        'Nama
+        '
+        Me.Nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Nama.HeaderText = "Nama"
+        Me.Nama.Name = "Nama"
+        '
+        'Nilai_AHP
+        '
+        Me.Nilai_AHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Nilai_AHP.HeaderText = "Nilai AHP"
+        Me.Nilai_AHP.Name = "Nilai_AHP"
+        Me.Nilai_AHP.Width = 77
+        '
+        'Rekomendasi
+        '
+        Me.Rekomendasi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Rekomendasi.HeaderText = "Rekomendasi"
+        Me.Rekomendasi.Name = "Rekomendasi"
         '
         'frmAHP
         '
@@ -149,4 +172,7 @@ Partial Class frmAHP
     Friend WithEvents Button1 As Button
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents Nama As DataGridViewTextBoxColumn
+    Friend WithEvents Nilai_AHP As DataGridViewTextBoxColumn
+    Friend WithEvents Rekomendasi As DataGridViewTextBoxColumn
 End Class

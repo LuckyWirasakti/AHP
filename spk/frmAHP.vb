@@ -178,9 +178,6 @@ Public Class frmAHP
     End Sub
 
     Private Sub loadRanking()
-        dgvHasil.Columns.Add("Nama", "Nama")
-        dgvHasil.Columns.Add("Nilai AHP", "Nilai AHP")
-        dgvHasil.Columns.Add("Rekomender", "Rekomender")
 
         Dim sqlcmd As MySqlCommand
         Dim sqlrd As MySqlDataReader
