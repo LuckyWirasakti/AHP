@@ -45,3 +45,4 @@ D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\SPK - AHP.xml
 D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\SPK - AHP.pdb
 D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.vbprojAssemblyReference.cache
 D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmPrint.resources
+D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\obj\x86\Debug\spk.frmLogin.resources
