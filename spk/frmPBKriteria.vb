@@ -6,7 +6,7 @@ Public Class frmPBKriteria
     Dim namaKriteria() As String
     Dim idKriteria() As String
 
-    Dim jlhBulat As Integer = 3
+    Dim jlhBulat As Integer = 2
 
     Private Sub setHeader()
         namaKriteria = c.getList("kriteria", "nama_kriteria", "urutan")
@@ -88,7 +88,7 @@ Public Class frmPBKriteria
             sqlrd = sqlcmd.ExecuteReader
             If sqlrd.HasRows = True Then
                 While sqlrd.Read = True
-                    dgvPB.Item(Array.IndexOf(idKriteria, sqlrd("colindex").ToString), Array.IndexOf(idKriteria, sqlrd("rowindex").ToString)).Value = Val(Format(sqlrd("nilai"), "0.000"))
+                    dgvPB.Item(Array.IndexOf(idKriteria, sqlrd("colindex").ToString), Array.IndexOf(idKriteria, sqlrd("rowindex").ToString)).Value = Val(Format(sqlrd("nilai"), "0.00"))
                 End While
                 c.myClose()
             Else
@@ -117,7 +117,7 @@ Public Class frmPBKriteria
         For i = 0 To namaKriteria.Length - 1
             For j = 0 To namaKriteria.Length - 1
                 If i > j Then
-                    dgvPB.Item(j, i).Value = Format(Math.Round(1 / Val(dgvPB.Item(i, j).Value), jlhBulat), "0.000")
+                    dgvPB.Item(j, i).Value = Format(Math.Round(1 / Val(dgvPB.Item(i, j).Value), jlhBulat), "0.00")
                 End If
             Next
         Next
@@ -127,7 +127,7 @@ Public Class frmPBKriteria
             For j = 0 To namaKriteria.Length - 1
                 jumlah += Val(dgvPB.Item(i, j).Value)
             Next
-            dgvPB.Item(i, namaKriteria.Length).Value = Format(Math.Round(jumlah, jlhBulat), "0.000")
+            dgvPB.Item(i, namaKriteria.Length).Value = Format(Math.Round(jumlah, jlhBulat), "0.00")
         Next
     End Sub
 
@@ -135,7 +135,7 @@ Public Class frmPBKriteria
         'menyamakan penyebut
         For i = 0 To namaKriteria.Length - 1
             For j = 0 To namaKriteria.Length - 1
-                dgvPrioritas.Item(i, j).Value = Format(Math.Round(Val(dgvPB.Item(i, j).Value) / Val(dgvPB.Item(i, namaKriteria.Length).Value), jlhBulat), "0.000")
+                dgvPrioritas.Item(i, j).Value = Format(Math.Round(Val(dgvPB.Item(i, j).Value) / Val(dgvPB.Item(i, namaKriteria.Length).Value), jlhBulat), "0.00")
             Next
         Next
 
@@ -145,7 +145,7 @@ Public Class frmPBKriteria
             For j = 0 To namaKriteria.Length - 1
                 jumlah += dgvPrioritas.Item(i, j).Value
             Next
-            dgvPrioritas.Item(i, namaKriteria.Length).Value = Format(Math.Round(jumlah, jlhBulat), "0.000")
+            dgvPrioritas.Item(i, namaKriteria.Length).Value = Format(Math.Round(jumlah, jlhBulat), "0.00")
         Next
 
         For i = 0 To namaKriteria.Length - 1
@@ -153,11 +153,11 @@ Public Class frmPBKriteria
             For j = 0 To namaKriteria.Length - 1
                 jumlah += Val(dgvPrioritas.Item(j, i).Value)
             Next
-            dgvPrioritas.Item(namaKriteria.Length, i).Value = Format(Math.Round(jumlah, jlhBulat), "0.000")
+            dgvPrioritas.Item(namaKriteria.Length, i).Value = Format(Math.Round(jumlah, jlhBulat), "0.00")
         Next
 
         For i = 0 To namaKriteria.Length - 1
-            dgvPrioritas.Item(namaKriteria.Length + 1, i).Value = Format(Math.Round(Val(dgvPrioritas.Item(namaKriteria.Length, i).Value) / namaKriteria.Length, jlhBulat), "0.000")
+            dgvPrioritas.Item(namaKriteria.Length + 1, i).Value = Format(Math.Round(Val(dgvPrioritas.Item(namaKriteria.Length, i).Value) / namaKriteria.Length, jlhBulat), "0.00")
         Next
     End Sub
 
@@ -165,10 +165,10 @@ Public Class frmPBKriteria
         For i = 0 To namaKriteria.Length - 1
             Dim jumlah As Double = 0
             For j = 0 To namaKriteria.Length - 1
-                dgvPenjumlahan.Item(j, i).Value = Format(Math.Round(Val(dgvPrioritas.Item(namaKriteria.Length + 1, j).Value) * Val(dgvPB.Item(j, i).Value), jlhBulat), "0.000")
+                dgvPenjumlahan.Item(j, i).Value = Format(Math.Round(Val(dgvPrioritas.Item(namaKriteria.Length + 1, j).Value) * Val(dgvPB.Item(j, i).Value), jlhBulat), "0.00")
                 jumlah += Val(dgvPenjumlahan.Item(j, i).Value)
             Next
-            dgvPenjumlahan.Item(namaKriteria.Length, i).Value = Format(Math.Round(jumlah, jlhBulat), "0.000")
+            dgvPenjumlahan.Item(namaKriteria.Length, i).Value = Format(Math.Round(jumlah, jlhBulat), "0.00")
         Next
     End Sub
 
@@ -186,23 +186,23 @@ Public Class frmPBKriteria
             For j = 0 To 1
                 jumlah += Val(dgvRasio.Item(j, i).Value)
             Next
-            dgvRasio.Item(2, i).Value = Format(Math.Round(jumlah, jlhBulat), "0.000")
+            dgvRasio.Item(2, i).Value = Format(Math.Round(jumlah, jlhBulat), "0.00")
         Next
 
         Dim ajumlah As Double = 0
         For i = 0 To namaKriteria.Length - 1
             ajumlah += Val(dgvRasio.Item(2, 1).Value)
         Next
-        dgvRasio.Item(2, namaKriteria.Length).Value = Format(Math.Round(ajumlah, jlhBulat), "0.000")
+        dgvRasio.Item(2, namaKriteria.Length).Value = Format(Math.Round(ajumlah, jlhBulat), "0.00")
     End Sub
 
     Private Sub hitungHasil()
-        dgvHasil.Item(0, 0).Value = Format(Math.Round(Val(namaKriteria.Length) / Val(dgvRasio.Item(2, namaKriteria.Length).Value), jlhBulat), "0.000")
+        dgvHasil.Item(0, 0).Value = Format(Math.Round(Val(namaKriteria.Length) / Val(dgvRasio.Item(2, namaKriteria.Length).Value), jlhBulat), "0.00")
 
-        dgvHasil.Item(0, 1).Value = Format(Math.Round(Val(dgvHasil.Item(0, 0).Value) - Val(namaKriteria.Length), jlhBulat), "0.000")
-        dgvHasil.Item(0, 1).Value = Format(Math.Round(Val(dgvHasil.Item(0, 1).Value) / Val(namaKriteria.Length), jlhBulat), "0.000")
+        dgvHasil.Item(0, 1).Value = Format(Math.Round(Val(dgvHasil.Item(0, 0).Value) - Val(namaKriteria.Length), jlhBulat), "0.00")
+        dgvHasil.Item(0, 1).Value = Format(Math.Round(Val(dgvHasil.Item(0, 1).Value) / Val(namaKriteria.Length), jlhBulat), "0.00")
 
-        dgvHasil.Item(0, 2).Value = Format(Math.Round(Val(dgvHasil.Item(0, 1).Value) / Val(NilaiIndeksRandom(namaKriteria.Length)), jlhBulat), "0.000")
+        dgvHasil.Item(0, 2).Value = Format(Math.Round(Val(dgvHasil.Item(0, 1).Value) / Val(NilaiIndeksRandom(namaKriteria.Length)), jlhBulat), "0.00")
 
         If Val(dgvHasil.Item(0, 2).Value) < 0.1 Then
             dgvHasil.Item(0, 3).Value = "Konsisten"

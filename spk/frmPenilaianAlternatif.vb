@@ -120,7 +120,7 @@ Public Class frmPenilaianAlternatif
         End If
     End Sub
 
-    Private Sub cmdSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub cmdSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
         Dim terisi As Boolean = True
         For i = 2 To dgv.ColumnCount - 1
             For j = 0 To namaAlternatif.Length - 1

@@ -2,6 +2,7 @@
 
 Public Class frmAHP
     Dim c As New clsConn
+    Dim recommend(100) As String
 
     Private Sub setHeader()
         'membuat colom
@@ -150,6 +151,8 @@ Public Class frmAHP
     Private Sub simpan()
         c.runSql("DELETE FROM ahp", c.conn)
 
+        Dim fields() As String = {"id_alternatif", "ahp", "recomendation"}
+        Dim datas() As String
         For i = 0 To dgvAHP.RowCount - 2
             If Not dgvAHP.Rows(i).HeaderCell.Value = "" Then
                 Dim sqlcmd As MySqlCommand
@@ -165,8 +168,8 @@ Public Class frmAHP
                     End While
                     sqlrd.Close()
                     c.myClose()
-                    Dim fields() As String = {"id_alternatif", "ahp"}
-                    Dim datas() As String = {idAlter, dgvAHP.Item(dgvAHP.ColumnCount - 1, i).Value.ToString}
+
+                    datas = {idAlter, dgvAHP.Item(dgvAHP.ColumnCount - 1, i).Value.ToString, recommend(i)}
                     c.insertData("ahp", fields, datas)
                 Catch ex As Exception
                     MsgBox("[ERROR:LOAD2] " & ex.Message, vbInformation + vbOKOnly, c.namaProgram)
@@ -182,7 +185,6 @@ Public Class frmAHP
         Dim sqlcmd As MySqlCommand
         Dim sqlrd As MySqlDataReader
         Dim sqlcmd2 As MySqlCommand
-        Dim recommend As String
         Dim average As String
 
         Try
@@ -206,12 +208,12 @@ Public Class frmAHP
                     dgvHasil.Item(1, i).Value = ahp
 
                     If CDec(ahp) >= CDec(average) Then
-                        recommend = "Direkomendasikan"
+                        recommend(i) = "Direkomendasikan"
                     Else
-                        recommend = "Tidak Direkomendasikan"
+                        recommend(i) = "Tidak Direkomendasikan"
                     End If
 
-                    dgvHasil.Item(2, i).Value = recommend
+                    dgvHasil.Item(2, i).Value = recommend(i)
                     i += 1
                 End While
             End If
@@ -248,15 +250,14 @@ Public Class frmAHP
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.PrintPreviewControl.StartPage = 0
-        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1.0
-        PrintPreviewDialog1.ShowDialog()
+        frmPrint.Show()
+        Me.Close()
     End Sub
 
     Dim mRow As Integer = 0
     Dim newpage As Boolean = True
     Private Sub PrintDocument1_PrintPage(sender As System.Object, e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
         With dgvHasil
             Dim fmt As StringFormat = New StringFormat(StringFormatFlags.LineLimit)
             fmt.LineAlignment = StringAlignment.Center
