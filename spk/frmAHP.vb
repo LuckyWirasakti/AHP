@@ -99,7 +99,7 @@ Public Class frmAHP
                                 If sqlrd.HasRows = True Then
                                     While sqlrd.Read = True
                                         'rumus ahp
-                                        dgvAHP.Item(j, i).Value = Format(Math.Round(Val(sqlrd("hasil")) * Val(nilaiKriteria), 3), "0.000")
+                                        dgvAHP.Item(j, i).Value = Format(Math.Round(Val(sqlrd("hasil")) * Val(nilaiKriteria), 2), "0.00")
                                     End While
                                 Else
                                     MsgBox("Nilai dari subkriteria tidak ditemukan", vbInformation + vbOKOnly, c.namaProgram)
