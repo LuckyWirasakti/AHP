@@ -236,7 +236,7 @@ Public Class frmPBSubKriteria
 
         Dim ajumlah As Double = 0
         For i = 0 To namaSubKriteria.Length - 1
-            ajumlah += Val(dgvRasio.Item(2, 1).Value)
+            ajumlah += Val(dgvRasio.Item(2, i).Value)
         Next
         dgvRasio.Item(2, namaSubKriteria.Length).Value = Format(Math.Round(ajumlah, jlhBulat), "0.00")
     End Sub
