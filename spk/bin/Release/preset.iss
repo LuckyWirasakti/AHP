@@ -2,16 +2,16 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "SPK Analytical Hierarchy Process"
-#define MyAppVersion "1.0"
-#define MyAppPublisher "Lucky Wirasakti"
-#define MyAppURL "https://www.wirasakti.web.id"
+#define MyAppVersion "1.5"
+#define MyAppPublisher "Wirasakti Labs"
+#define MyAppURL "http://www.wirasakti.web.id/"
 #define MyAppExeName "SPK - AHP.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{DBD4E4F5-7CF4-40E6-91EB-F32A03778225}
+AppId={{E34EB607-189D-4177-8B9E-F7CC2F32D7AF}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -22,6 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableDirPage=yes
 DefaultGroupName={#MyAppName}
+AllowNoIcons=yes
 OutputDir=D:\Code\NET\spk-ahp-vb.net-master\Program\spk\output
 OutputBaseFilename=setup
 Compression=lzma
@@ -58,6 +59,7 @@ Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Google.Pr
 Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Google.Protobuf.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\MySql.Data.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\MySql.Data.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\preset.iss"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Renci.SshNet.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\Renci.SshNet.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\ShockwaveFlashObjects.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -70,7 +72,9 @@ Source: "D:\Code\NET\spk-ahp-vb.net-master\Program\spk\spk\bin\Release\stdole.dl
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
+
+[Run]
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, "&", "&&")}}"; Flags: nowait postinstall skipifsilent
 
