@@ -3,7 +3,7 @@ Imports System.String               'Manipulasi String
 
 Public Class clsConn
     Public namaProgram As String = "SPK - AHP"
-    Public conn As New MySqlConnection With {.ConnectionString = "server=localhost;userid=root;password=;database=spk"}
+    Public conn As New MySqlConnection With {.ConnectionString = "server=localhost;userid=root;password=;database=vb-spk-ahp"}
     Public sqlDs As DataSet 'akan digunakan untuk pengambilan data ke table
 
     Public Sub myOpen()
